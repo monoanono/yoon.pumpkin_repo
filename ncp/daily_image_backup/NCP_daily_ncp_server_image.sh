@@ -57,7 +57,7 @@ if [ -n "$DELETE_RESULT" ]; then
     curl -X POST -H 'Content-type: application/json' \
         --data "$(cat <<EOF
 {
-  "text": "NCP SKM&S 서버 이미지 삭제 결과\n\n$DELETE_RESULT"
+  "text": "NCP 고객사 서버 이미지 삭제 결과\n\n$DELETE_RESULT"
 }
 EOF
 )" "$SLACK_WEBHOOK_URL"
@@ -90,7 +90,7 @@ if [ -n "$CREATE_REQUEST_RESULT" ]; then
     curl -X POST -H 'Content-type: application/json' \
         --data "$(cat <<EOF
 {
-  "text": "NCP SKM&S 서버 이미지 생성 요청 결과\n\n$CREATE_REQUEST_RESULT"
+  "text": "NCP 고객사 서버 이미지 생성 요청 결과\n\n$CREATE_REQUEST_RESULT"
 }
 EOF
 )" "$SLACK_WEBHOOK_URL"
@@ -121,7 +121,7 @@ if [ -n "$CREATE_VERIFY_RESULT" ]; then
     curl -X POST -H 'Content-type: application/json' \
         --data "$(cat <<EOF
 {
-  "text": "NCP SKM&S 서버 이미지 생성 완료 확인 결과\n\n$CREATE_VERIFY_RESULT"
+  "text": "NCP 고객사 서버 이미지 생성 완료 확인 결과\n\n$CREATE_VERIFY_RESULT"
 }
 EOF
 )" "$SLACK_WEBHOOK_URL"
