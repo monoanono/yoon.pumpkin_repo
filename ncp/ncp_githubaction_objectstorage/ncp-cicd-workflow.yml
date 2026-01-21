@@ -18,8 +18,8 @@ jobs:
 
     env:
       NCP_OBJECT_ENDPOINT: https://kr.object.ncloudstorage.com
-      NCP_BUCKET_NAME: testapiuws
-      ARTIFACT_NAME: TestAPI_GithubAction.zip
+      NCP_BUCKET_NAME: 버킷이름
+      ARTIFACT_NAME: 파일이름.zip
 
       AWS_DEFAULT_REGION: us-east-1
       AWS_REGION: us-east-1
