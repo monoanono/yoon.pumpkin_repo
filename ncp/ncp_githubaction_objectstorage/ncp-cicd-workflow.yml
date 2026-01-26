@@ -18,8 +18,7 @@ jobs:
 
     env:
       NCP_OBJECT_ENDPOINT: https://kr.object.ncloudstorage.com
-      NCP_BUCKET_NAME: 버킷이름
-      ARTIFACT_NAME: 파일이름.zip
+      NCP_BUCKET_NAME: 버킷 이름
 
       AWS_DEFAULT_REGION: us-east-1
       AWS_REGION: us-east-1
@@ -44,6 +43,12 @@ jobs:
 
 #      - name: Execute unit tests
 #        run: dotnet test
+
+      - name: Set artifact name (KST)
+        run: |
+          echo "ARTIFACT_NAME=서비스이름_$(TZ=Asia/Seoul date +%Y%m%d_%H%M).zip" >> $GITHUB_ENV
+          echo "Artifact: $ARTIFACT_NAME"
+# Object Storage 업로드 빌드 파일 버저닝 위한 파일명 설정 서비스이름_날짜_시간.zip 으로 설정
 
       - name: Restore
         run: dotnet restore TestAPI/TestAPI.csproj
