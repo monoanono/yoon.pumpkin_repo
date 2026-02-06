@@ -6,7 +6,7 @@ on:
 #  pull_request:
 #    branches: [ "master" ]
     paths:
-      - 'TestAPI/**'
+      - '깃 레포 경로'
   workflow_dispatch:
 
 jobs:
