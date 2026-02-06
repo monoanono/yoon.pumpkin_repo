@@ -67,7 +67,7 @@ jobs:
       - name: Show AWS CLI version
         run: aws --version
 
-      - name: Upload zip to NCP Object Storage
+      - name: Upload zip to NCP Object Storage # 레포 시크릿에 액세스키, 시크릿키 등록 필요
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.NCLOUD_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.NCLOUD_SECRET_KEY }}
