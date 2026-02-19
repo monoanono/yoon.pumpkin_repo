@@ -42,7 +42,7 @@ helm upgrade --install argo레포이름 . -f values.yaml --namespace argocd \
 <img width="681" height="102" alt="Image" src="https://github.com/user-attachments/assets/ed222847-b4c4-4c91-afe1-fc00d879c704" />
 
 ```
-kubectl patch svc argo-uws-argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+kubectl patch svc argo-argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```  
   - argocd-server 설정 "type": "LoadBalancer" 로 변경
 <img width="1253" height="38" alt="Image" src="https://github.com/user-attachments/assets/8b1b5e33-058b-4b6a-ac8a-b31081a99b94" />
