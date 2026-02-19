@@ -1,5 +1,7 @@
 # Github Action CI 설정 (AWS ECR, AWS OIDC)
-================================
+
+
+
 ## 1. 구성도
 <img width="769" height="336" alt="Image" src="https://github.com/user-attachments/assets/36969b1d-fcd8-45d1-b476-ce12410639c1" />
 
