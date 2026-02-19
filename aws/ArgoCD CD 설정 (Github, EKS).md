@@ -41,12 +41,16 @@ helm upgrade --install argo레포이름 . -f values.yaml --namespace argocd \
 <img width="1208" height="804" alt="Image" src="https://github.com/user-attachments/assets/9bf799b0-3664-4d97-9083-9e506cb3b6f2" />
 <img width="681" height="102" alt="Image" src="https://github.com/user-attachments/assets/ed222847-b4c4-4c91-afe1-fc00d879c704" />
 
-  - kubectl patch svc argo-uws-argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
-    argocd-server 설정 "type": "LoadBalancer" 로 변경
+```
+kubectl patch svc argo-uws-argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+```  
+  - argocd-server 설정 "type": "LoadBalancer" 로 변경
 <img width="1253" height="38" alt="Image" src="https://github.com/user-attachments/assets/8b1b5e33-058b-4b6a-ac8a-b31081a99b94" />
 
-  - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d> argocd_pw.txt
-    ArgoCD admin 초기 Default 설정 계정 암호 확인
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d> argocd_pw.txt
+```
+  - ArgoCD admin 초기 Default 설정 계정 암호 확인
 
   - kubectl get svc -n argocd
     ArgoCD 웹 접속 LB 정보 확인
