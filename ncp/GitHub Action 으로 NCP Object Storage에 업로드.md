@@ -51,7 +51,8 @@
 
 - **리소스 지정**을 통해 접근 가능한 버킷을 제한 (예: `test-githubaction` 등 필요한 버킷만)
 - 콘솔 로그인은 사무실 공인 IP 대역만 허용하도록 접근 제어 설정
-<img width="498" height="304" alt="Image" src="https://github.com/user-attachments/assets/e1209b0f-de64-4bd0-9043-1a59124d6c63" />
+<img width="498" height="304" alt="Image" src="https://github.com/user-attachments/assets/f0a7f896-e9ce-4a41-bbe2-2d95072cae8a" />
+
 ---
 
 ## 4. GitHub 설정
