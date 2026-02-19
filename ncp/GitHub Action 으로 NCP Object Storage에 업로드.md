@@ -156,16 +156,6 @@ jobs:
           aws --endpoint-url="${NCP_OBJECT_ENDPOINT}" \
             s3 cp "${ARTIFACT_NAME}" "s3://${NCP_BUCKET_NAME}/${ARTIFACT_NAME}"
 ```
-<img width="1903" height="914" alt="Image" src="https://github.com/user-attachments/assets/62ebd77d-e3c1-481d-9e4f-9404ad62da81" />
-
-<img width="1902" height="905" alt="Image" src="https://github.com/user-attachments/assets/c763688a-1395-4cb8-bcf0-6f469ae1a9a3" />
-
-<img width="1915" height="901" alt="Image" src="https://github.com/user-attachments/assets/03cd8867-ead8-4901-8182-5d052bbae4b6" />
-
-<img width="1919" height="910" alt="Image" src="https://github.com/user-attachments/assets/ae0706ff-fc7b-45bc-909a-a533e35b7292" />
-
-<img width="1919" height="912" alt="Image" src="https://github.com/user-attachments/assets/95c49012-95a1-4234-b485-f4bf83533251" />
-
 ---
 
 ## 7. 빌드 및 업로드 동작
