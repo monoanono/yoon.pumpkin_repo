@@ -24,7 +24,8 @@
 ## 4. ArgoCD 설치
 
 
-```helm upgrade --install argo레포이름 . -f values.yaml --namespace argocd \
+```helm
+helm upgrade --install argo레포이름 . -f values.yaml --namespace argocd \
 --set server.GKEbackendConfig.enabled=false \
 --set controller.service.annotations={} \
 --set controller.service.port=8082 \
