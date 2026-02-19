@@ -22,14 +22,14 @@
 - NCP SourceDeploy 배포 Agent 설치용 Init Script 구성
 <img width="1917" height="911" alt="Image" src="https://github.com/user-attachments/assets/83f383e6-13f2-4342-914a-93092d86cc25" />
 <img width="1914" height="912" alt="Image" src="https://github.com/user-attachments/assets/b08ec533-11a4-4c3d-80e1-366059307294" />
-  ```
-  #!/bin/bash
-  echo $'NCP_ACCESS_KEY=서브 어카운트 엑세스 키\nNCP_SECRET_KEY=서브 어카운트 시크릿 키' > /opt/NCP_AUTH_KEY
-  chmod 400 /opt/NCP_AUTH_KEY
-  wget --header="에이전트 사용리전 헤더 정보" "Agent 다운로드 주소"
-  chmod 755 install
-  ./install
-  rm -rf install
+
+  ```#!/bin/bash
+echo $'NCP_ACCESS_KEY=서브 어카운트 엑세스 키\nNCP_SECRET_KEY=서브 어카운트 시크릿 키' > /opt/NCP_AUTH_KEY
+chmod 400 /opt/NCP_AUTH_KEY
+wget --header="에이전트 사용리전 헤더 정보" "Agent 다운로드 주소"
+chmod 755 install
+./install
+rm -rf install
 
   ```
 
