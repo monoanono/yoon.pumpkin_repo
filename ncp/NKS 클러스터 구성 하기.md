@@ -153,38 +153,38 @@
 <img width="477" height="511" alt="Image" src="https://github.com/user-attachments/assets/9969e914-6f84-4c3b-9ba0-e694ab8599d0" />
 
 ```yaml
-	apiVersion: apps/v1
-	kind: Deployment
-	metadata:
-	  name: mario
-	  labels:
-	    app: mario
-	spec:
-	  replicas: 1
-	  selector:
-	    matchLabels:
-	      app: mario
-	  template:
-	    metadata:
-	      labels:
-	        app: mario
-	    spec:
-	      containers:
-	      - name: mario
-	        image: pengbai/docker-supermario
-	---
-	apiVersion: v1
-	kind: Service
-	metadata:
-	   name: mario
-	spec:
-	  selector:
-	    app: mario
-	  ports:
-	  - port: 80
-	    protocol: TCP
-	    targetPort: 8080
-	  type: LoadBalancer
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mario
+  labels:
+    app: mario
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mario
+  template:
+    metadata:
+      labels:
+        app: mario
+    spec:
+      containers:
+      - name: mario
+        image: pengbai/docker-supermario
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: mario
+spec:
+  selector:
+    app: mario
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  type: LoadBalancer
 
 ```
 
