@@ -11,7 +11,7 @@
 ---
 
 # Yoon. Pumpkin Repository
-  - 윤호 박 개인 리포지토리 입니다.
+  - 윤호 박 개인 Repo 입니다.
 
 ## 파일 구조
 
