@@ -19,6 +19,7 @@
 │   │   ├── check_ncp_classic_resource_status
 │   │   └── check_ncp_resource_status
 │   ├── GitHub Action 으로 NCP Object Storage에 업로드.md
+│   ├── NCP CLI 활용 일일 서버이미지 백업 설정.md
 │   ├── NCP Source Deploy 배포 (서버, ASG).md
 │   ├── NKS 클러스터 구성 하기.md
 │   └── README_ncp_shell.md
