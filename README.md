@@ -17,7 +17,7 @@
 
 ```
 ├── .github/workflows
-│   ├── .yml
+│   └── .yml
 ├── aws
 │   ├── ArgoCD CD 설정 (Github, EKS).md
 │   ├── Github Action CI 설정 (AWS ECR, AWS OIDC).md
