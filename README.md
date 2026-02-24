@@ -6,7 +6,7 @@
 ├── .github/workflows
 │   ├── .yml
 ├── aws
-│   ├── ArgoCD CD 설정 (Github, EKS).md
+│   ├── ArgoCD CD 설정 (Github, EKS).md https://github.com/monoanono/yoon.pumpkin_repo/blob/main/aws/ArgoCD%20CD%20%EC%84%A4%EC%A0%95%20(Github%2C%20EKS).md
 │   ├── Github Action CI 설정 (AWS ECR, AWS OIDC).md
 │   ├── README_WORKFLOW.md
 │   └── .yml
