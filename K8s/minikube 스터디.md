@@ -10,7 +10,6 @@
 
 ```
 DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
-
 ```
 <img width="643" height="181" alt="Image" src="https://github.com/user-attachments/assets/0a92f25f-8003-49fe-8f2c-524b40fa0215" />
 
