@@ -19,7 +19,6 @@ DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
   - minikube  버전 확인
 ```
 minikube version
-
 ```
 <img width="406" height="67" alt="Image" src="https://github.com/user-attachments/assets/3ee25b2e-a392-4667-af86-666f202e5952" />
 
@@ -29,7 +28,6 @@ minikube version
 
 ```
 minikube start --driver=hyperv
-
 ```
 <img width="838" height="188" alt="Image" src="https://github.com/user-attachments/assets/04ee04fb-fe66-4279-ada7-408d20c2ab77" />
 <img width="960" height="515" alt="Image" src="https://github.com/user-attachments/assets/70f62f1e-dde9-45bc-903b-b1a9d696c198" />
@@ -40,7 +38,6 @@ minikube start --driver=hyperv
   - minikube 상태 확인
 ```
 minikube status
-
 ```
 <img width="221" height="127" alt="Image" src="https://github.com/user-attachments/assets/9361f6aa-7635-4ae5-823a-10a61b11dd9c" />
 <img width="203" height="52" alt="Image" src="https://github.com/user-attachments/assets/0f06496a-d221-43b0-bcd9-5c61d206e9af" />
@@ -52,7 +49,6 @@ minikube status
 
 ```
 minikube ssh
-
 ```
 <img width="452" height="157" alt="Image" src="https://github.com/user-attachments/assets/b178016b-c971-4df4-aef5-20a23b8385c7" />
 
@@ -72,7 +68,6 @@ minikube ssh
 
 ```
 curl.exe -LO "https://dl.k8s.io/release/v1.35.0/bin/windows/amd64/kubectl.exe"
-
 ```
 <img width="733" height="83" alt="Image" src="https://github.com/user-attachments/assets/c988a388-b210-457f-b090-baf4a1db9794" />
 
@@ -85,7 +80,6 @@ curl.exe -LO "https://dl.k8s.io/release/v1.35.0/bin/windows/amd64/kubectl.exe"
 
 ```
 kubectl version --client
-
 ```
 <img width="312" height="66" alt="Image" src="https://github.com/user-attachments/assets/ee580512-80c4-4af9-9bf5-902467bcac23" />
 
@@ -95,7 +89,6 @@ kubectl version --client
 
 ```
 kubectl describe service
-
 ```
 <img width="377" height="300" alt="Image" src="https://github.com/user-attachments/assets/da8b6e86-508d-41cc-a9f5-07f285b4cc67" />
 <img width="639" height="500" alt="Image" src="https://github.com/user-attachments/assets/50ebf65f-5a14-4e45-a2d5-70bc3915e348" />
