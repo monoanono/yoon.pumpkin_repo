@@ -62,6 +62,7 @@
       - /sys/fs/cgroup
       - 컨테이너 런타임 (containerd, CRI-O)
 
+----
 
   - Node 전체 메트릭 -> 출처: Node Exporter
     - Node Exporter 는 리눅스 OS 정보를 수집
@@ -71,12 +72,14 @@
       - /proc/diskstats
       - /sys
 
+----
 
   - Pod / Deployment / Kubernetes 오브젝트 메트릭 -> 출처: kube-state-metrics
     - 리소스 사용량이 아니라 Kubernetes API 정보를 가져온다.
       - Pod 상태
       - 설정된 replicas 수
 
+----
 
   - 애플리케이션 메트릭 -> 애플리케이션 내부 instrumentation / Application Exporter (NGINX Exporter, MySQL Exporter, 등등)
     - 애플리케이션 코드 내부 변수값
