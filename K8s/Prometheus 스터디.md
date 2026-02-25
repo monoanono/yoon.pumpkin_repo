@@ -15,34 +15,34 @@
 
 
   ### 2.1. Exporter / Job
-    - 모니터링 대상의 Metric 데이터를 수집하고 중앙 집중 서버인 Prometheus Server가 Metrics 데이터를 가져 갈 수 있도록 API Endpoint 을 제공
-      - node-exporter: 노드의 CPU, Memory, Network bandwidth 등 metrics 정보를 수집
-      - jmx-exporter: JVM metrics 수집 (tomcat, kafka, cassandra …)
-      - kafka-exporter, mysql-exporter, redis-exporter 등 다양한 exporter가 이미 제공되며, 커스텀도 가능
-      - 공식적으로 제공하는 Exporters →https://prometheus.io/docs/instrumenting/exporters/
+  - 모니터링 대상의 Metric 데이터를 수집하고 중앙 집중 서버인 Prometheus Server가 Metrics 데이터를 가져 갈 수 있도록 API Endpoint 을 제공
+    - node-exporter: 노드의 CPU, Memory, Network bandwidth 등 metrics 정보를 수집
+    - jmx-exporter: JVM metrics 수집 (tomcat, kafka, cassandra …)
+    - kafka-exporter, mysql-exporter, redis-exporter 등 다양한 exporter가 이미 제공되며, 커스텀도 가능
+    - 공식적으로 제공하는 Exporters →https://prometheus.io/docs/instrumenting/exporters/
 
 
   ### 2.2. Prometheus Server
-    - Retrieveal가 Exporter에서 제공하는 API를 통해서, Metrics를 Pull 해와서 -> Prometheus Server 내의 TSDB에 저장.
-      - 특이점은, 대다수의 모니터링 시스템과 같은 Push 방식이 아닌 Pull 방식으로 Metrics 데이터를 수집
-        - 대부분의 모니터링 도구가 Push 방식으로, 각 대상 서버에 Agent를 설치하고, Agent가 데이터를 수집해서 중앙 서버로 전송하는 방식을 사용.
-        - 반면, Prometheus의 경우에는 Pull 방식으로, 중앙 집중 서버에서 각 target 서버로 부터 (Exporter를 통해) 메트릭 데이터를 수집해가는 방식
-      - 모든 메트릭 지표를 전송하지 않아도 되므로, 트래픽 및 오버헤드 감소 및 Prometheus Server의 장애가 애플리케이션에 영향을 미치지 않는 장점.
-      - 단점으로는 중앙 집중 서버인 Prometheus Server에서 각 대상 서버에 대한 정보를 알고 있어야 하는데, Service Discovery를 두어서 해결
+  - Retrieveal가 Exporter에서 제공하는 API를 통해서, Metrics를 Pull 해와서 -> Prometheus Server 내의 TSDB에 저장.
+    - 특이점은, 대다수의 모니터링 시스템과 같은 Push 방식이 아닌 Pull 방식으로 Metrics 데이터를 수집
+      - 대부분의 모니터링 도구가 Push 방식으로, 각 대상 서버에 Agent를 설치하고, Agent가 데이터를 수집해서 중앙 서버로 전송하는 방식을 사용.
+      - 반면, Prometheus의 경우에는 Pull 방식으로, 중앙 집중 서버에서 각 target 서버로 부터 (Exporter를 통해) 메트릭 데이터를 수집해가는 방식
+    - 모든 메트릭 지표를 전송하지 않아도 되므로, 트래픽 및 오버헤드 감소 및 Prometheus Server의 장애가 애플리케이션에 영향을 미치지 않는 장점.
+    - 단점으로는 중앙 집중 서버인 Prometheus Server에서 각 대상 서버에 대한 정보를 알고 있어야 하는데, Service Discovery를 두어서 해결
 
 
   ### 2.3. PushGateway
-    - pull 할 수 없는 상황에서 pull 방식이 아닌 Push 방식으로 metrics를 전송하기 위한 컴포넌트
-      - Exporter와 동일한 역할을 하지만, pull 방식이 아닌 Push 방식으로 동작하는 컴포넌트
-        - 예를 들어, 배치 잡 등 prometheus server가 exporter로부터 pull 하기도 전에 파드가 종료되어서, Prometheus Server(Retrieval 모듈)이 메트릭 정보를 읽어가기 전에 종료되는 경우
-        - Prometheus Server에서 메트릭 정보를 읽어갈 Exporter가 Prometheus Server에서 접근할 수 없는 곳에 있는 경우
+  - pull 할 수 없는 상황에서 pull 방식이 아닌 Push 방식으로 metrics를 전송하기 위한 컴포넌트
+    - Exporter와 동일한 역할을 하지만, pull 방식이 아닌 Push 방식으로 동작하는 컴포넌트
+      - 예를 들어, 배치 잡 등 prometheus server가 exporter로부터 pull 하기도 전에 파드가 종료되어서, Prometheus Server(Retrieval 모듈)이 메트릭 정보를 읽어가기 전에 종료되는 경우
+      - Prometheus Server에서 메트릭 정보를 읽어갈 Exporter가 Prometheus Server에서 접근할 수 없는 곳에 있는 경우
 
 
   ### 2.4. AlertManager
-    - 설정된 Rule에 따른 알림 Notification 담당
-    - Slack 등에 연동해서 알림 시스템 구축 가능
-    - ex) 임계치를 넘어서면 알림 발송 등
-        - Cpu usage 70% 이상이 되면 알림을 발송하는 등
+  - 설정된 Rule에 따른 알림 Notification 담당
+  - Slack 등에 연동해서 알림 시스템 구축 가능
+  - ex) 임계치를 넘어서면 알림 발송 등
+      - Cpu usage 70% 이상이 되면 알림을 발송하는 등
 
 
 ---
