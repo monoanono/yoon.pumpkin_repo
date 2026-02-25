@@ -20,6 +20,7 @@
 │    └── .ymls
 ├── K8s
 │    ├── K8S 스터디.md
+│    ├── Prometheus 스터디.md
 │    └── minikube 스터디.md
 ├── aws
 │    ├── EKS
