@@ -19,7 +19,8 @@
 ├── .github/workflows
 │    └── .ymls
 ├── K8s
-│    └── K8S 스터디.md
+│    ├── K8S 스터디.md
+│    └── minikube 스터디.md
 ├── aws
 │    ├── EKS
 │    │    ├── AWS EKS vs ECS.md
