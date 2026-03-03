@@ -21,6 +21,7 @@
 ├── K8s
 │    ├── K8S 스터디.md
 │    ├── Prometheus Operator 설치.md
+│    ├── Prometheus Stand Alone VS Operator.md
 │    ├── Prometheus 스터디.md
 │    ├── Prometheus 알람 수신 설정.md
 │    └── minikube 스터디.md
