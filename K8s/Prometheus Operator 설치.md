@@ -19,7 +19,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 ```
 <img width="787" height="51" alt="Image" src="https://github.com/user-attachments/assets/f93a8861-9bc0-4342-b8ef-0c1d50a76a09" />
 
-    - Prometheus CRD yaml : https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/charts/crds/crds
+  - Prometheus CRD yaml : https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/charts/crds/crds
 
   - helm repo 업데이트
 ```CMD
