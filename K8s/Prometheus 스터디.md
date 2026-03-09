@@ -9,6 +9,14 @@
 ## 1. Prometeus 아키텍처
 <img width="771" height="529" alt="Image" src="https://github.com/user-attachments/assets/c20a27be-f72a-4b30-bbdb-1be50c4f609b" />
 
+  - 매트릭 데이터 흐름
+    - Exporter에서 매트릭 데이터 생성
+    - Prometheus Server 내 Retrival이 매트릭 데이터 Scrape, Prometheus 내부 구조로 변환
+    - Prometheus Server 내 TSDB 에 매트릭 데이터 저장 -> PromQL로 조회되는 데이터
+    - Prometheus Server가 TSDB 매트릭 데이터를 바탕으로 PromQL 조건을 평가하여 Alert Rule Firing 여부 판단
+    - Alert Rule이 true이면 Prometheus가 Alert 이벤트 생성
+    - Prometheus Server가 Alert를 Alertmanager 로 전송
+    - Alertmanager가 설정 사항에 따라 Slack 등으로 Notification
 ---
 
 ## 2. Prometeus 구성 요소
