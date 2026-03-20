@@ -49,15 +49,15 @@ prometheus-node-exporter:
 
 
 ### 3.2 설정 전후 수집 데이터 용량 비교 
-    - EKS 클러스터 환경 별도 어플리케이션 미 설치 클러스터 상 Prometheus만 구성
+  - EKS 클러스터 환경 별도 어플리케이션 미 설치 클러스터 상 Prometheus만 구성
 
 
 #### 3.2.1 일반 버전 Prometheus Operator Helm 배포
-    - 2시간 경과 후 수집 용량 - 212.5MB
+  - 2시간 경과 후 수집 용량 - 212.5MB
 <img width="1855" height="495" alt="Image" src="https://github.com/user-attachments/assets/8c6028b8-fa90-404d-9e18-aefa052699df" />
 <img width="1464" height="66" alt="Image" src="https://github.com/user-attachments/assets/d46a115e-533f-491f-8228-5234df534a33" />
 
 #### 3.2.2 불필요 Collector 제외 설정 Prometheus Operator Helm 배포
-    - 2시간 경과 후 수집 용량 - 179.5MB (메트릭 데이터 수집 용량 기준 설정 전후 대비 약 15% 감소)
+  - 2시간 경과 후 수집 용량 - 179.5MB (메트릭 데이터 수집 용량 기준 설정 전후 대비 약 15% 감소)
 <img width="1862" height="509" alt="Image" src="https://github.com/user-attachments/assets/759cea4b-cad6-485f-ac1c-91ceb4a5d2f9" />
 <img width="932" height="87" alt="Image" src="https://github.com/user-attachments/assets/f587e980-7f00-4fc9-9a4a-acf792c7ab3e" />
