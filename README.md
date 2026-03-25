@@ -18,7 +18,15 @@
 ```
 ├── .github/workflows
 │    └── .ymls
-├── K8s
+├── [AWS]
+│    ├── EKS
+│    │    ├── AWS EKS vs ECS.md
+│    │    └── AWS EKS 스터디.md
+│    ├── ArgoCD CD 설정 (Github, EKS).md
+│    ├── Github Action CI 설정 (AWS ECR, AWS OIDC).md
+│    ├── README_WORKFLOW.md
+│    └── .ymls
+├── [Kubernetes]
 │    ├── Prometheus
 │    │    ├── Prometheus Helm Cahrt v82.10.2
 │    │    ├── Prometheus Operator 설치.md
@@ -28,15 +36,7 @@
 │    │    └── prometheus-value.yaml
 │    ├── K8S 스터디.md
 │    └── minikube 스터디.md
-├── aws
-│    ├── EKS
-│    │    ├── AWS EKS vs ECS.md
-│    │    └── AWS EKS 스터디.md
-│    ├── ArgoCD CD 설정 (Github, EKS).md
-│    ├── Github Action CI 설정 (AWS ECR, AWS OIDC).md
-│    ├── README_WORKFLOW.md
-│    └── .ymls
-├── ncp
+├── [NCP]
 │    ├── daily_image_backup
 │    │    ├── NCP CLI 활용 일일 서버이미지 백업 설정.md
 │    │    └── NCP_daily_ncp_server_image.sh
@@ -49,6 +49,9 @@
 │    ├── NCP Source Deploy 배포 (서버, ASG).md
 │    ├── NKS 클러스터 구성 하기.md
 │    └── README_ncp_shell.md
+├── [Terraform]
+│    └── NKS
+│         └── .tfs
 └── README.md
 ```
 
