@@ -19,11 +19,14 @@
 ├── .github/workflows
 │    └── .ymls
 ├── K8s
+│    ├── Prometheus
+│    │    ├── Prometheus Helm Cahrt v82.10.2
+│    │    ├── Prometheus Operator 설치.md
+│    │    ├── Prometheus Stand Alone VS Operator.md
+│    │    ├── Prometheus 스터디.md
+│    │    ├── Prometheus 알람 수신 설정.md
+│    │    └── prometheus-value.yaml
 │    ├── K8S 스터디.md
-│    ├── Prometheus Operator 설치.md
-│    ├── Prometheus Stand Alone VS Operator.md
-│    ├── Prometheus 스터디.md
-│    ├── Prometheus 알람 수신 설정.md
 │    └── minikube 스터디.md
 ├── aws
 │    ├── EKS
@@ -48,3 +51,6 @@
 │    └── README_ncp_shell.md
 └── README.md
 ```
+
+
+
