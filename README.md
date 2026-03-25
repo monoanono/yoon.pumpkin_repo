@@ -28,7 +28,7 @@
 │    └── .ymls
 ├── [Kubernetes]
 │    ├── Prometheus
-│    │    ├── Prometheus Helm Cahrt v82.10.2
+│    │    ├── Prometheus Operator Helm Cahrt v82.10.2
 │    │    ├── Prometheus Operator 설치.md
 │    │    ├── Prometheus Stand Alone VS Operator.md
 │    │    ├── Prometheus 스터디.md
