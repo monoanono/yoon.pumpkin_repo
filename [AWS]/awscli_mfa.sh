@@ -8,7 +8,7 @@ read -p "MFA 토큰 코드를 입력하세요: " TOKEN_CODE
 
 # AWS CLI로 세션 토큰 요청 (JSON 응답)
 RESPONSE=$(aws sts get-session-token \
-  --serial-number #"AWS 계정 내 MFA 장치 ARN" \
+  --serial-number #AWS 계정 내 MFA 장치 ARN \
   --token-code "$TOKEN_CODE")
 
 # 각 값 추출 (jq 사용)
