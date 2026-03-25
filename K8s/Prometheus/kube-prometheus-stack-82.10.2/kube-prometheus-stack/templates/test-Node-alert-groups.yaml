@@ -1,0 +1,47 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: test-node-alert
+  namespace: monitoring
+  labels:
+    release: test-prometheus
+spec:
+  groups:
+    - name: system_alerts
+      interval: 30s
+      rules:
+        - alert: HighCPUUsage
+          expr: 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 90
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "{{ $labels.instance }}에서 CPU 사용률이 높습니다"
+            description: "CPU 사용률이 90%를 초과했습니다 (현재 값: {{ $value }}%)"
+
+        - alert: HighMemoryUsage
+          expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100 > 90
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "{{ $labels.instance }}에서 메모리 사용률이 높습니다"
+            description: "메모리 사용률이 90%를 초과했습니다 (현재 값: {{ $value }}%)"
+
+        - alert: DiskSpaceLow
+          expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes) * 100 < 15
+          for: 10m
+          labels:
+            severity: critical
+          annotations:
+            summary: "{{ $labels.instance }}의 디스크 공간이 부족합니다"
+            description: "{{ $labels.mountpoint }}에서 사용 가능한 디스크 공간이 15% 미만입니다"
+
+        - alert: InstanceDown
+          expr: up == 0
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "{{ $labels.instance }} 인스턴스가 다운되었습니다"
+            description: "{{ $labels.job }} 인스턴스 {{ $labels.instance }}이 1분 이상 다운되었습니다"
